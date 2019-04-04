@@ -8,11 +8,14 @@ def run
   puts "Which shoe would you like to choose?"
   html = open("https://www.store.crossfit.com/women-shoes")
   doc = Nokogiri::HTML(html)
-  doc.css(".partner").map
-    title.shoes.css(".title").text.strip
-    shoes << title
+    binding.pry
 
-  shoes.each.with_index(k) do |title, k|
-    puts "#{k}, #{title}"
+  doc.css(".partner").collect {|title|}
+    title = shoes.css(".title").text.strip
+    shoe = Shoe.new(title)
+    movie.save
+
+  Shoe.all.each.with_index(s) do |title, s|
+    puts "#{s}, #{title}"
   end
 end
