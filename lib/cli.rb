@@ -1,6 +1,6 @@
 require 'pry'
-require 'nokogiri'
-require 'open-uri'
+require 'nokogiri' #parsing data
+require 'open-uri' #open webpage
 
 def run
   shoes = []
@@ -8,9 +8,9 @@ def run
   puts "Which shoe would you like to choose?"
   html = open("https://www.store.crossfit.com/women-shoes")
   doc = Nokogiri::HTML(html)
-    binding.pry
 
-  doc.css(".partner").collect {|title|}
+    binding.pry
+  doc.css(".partner")[0].collect {|title|}
     title = shoes.css(".title").text.strip
     shoe = Shoe.new(title)
     movie.save
