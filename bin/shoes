@@ -1,0 +1,3 @@
+require_relative "../lib/store.rb" #.. = up one folder
+
+run #run what is in the file above
