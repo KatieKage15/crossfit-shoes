@@ -1,15 +1,13 @@
 # Crossfit::Shoes
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/crossfit/shoes`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+My gem is based off of the crossfit website where they sell different types of shoes. There will be a list of shoes the user can choose from and when selected it will provide more information about the shoe.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'crossfit-shoes'
+#gem 'crossfit-shoes'
 ```
 
 And then execute:

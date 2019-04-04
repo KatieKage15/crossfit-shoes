@@ -1,4 +1,7 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in crossfit-shoes.gemspec
+gem 'pry'
+gem 'open-uri'
+gem 'Nokogiri'
+
 gemspec
