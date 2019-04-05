@@ -1,16 +1,18 @@
 class Shoe
 
-  attr_accsessor :name, :color, :price
+  attr_accessor :shoe_name, :color, :price, :title
 
   @@all = []
 
-  def intialize(shoe = nil, color = nil, price = nil)
-    @name = name
-    @color = color
-    @price = price
+  def initialize(title)
+    @title = title 
+  end
+
+  def save
     @@all << self
   end
 
   def self.all
     @@all
   end
+end
