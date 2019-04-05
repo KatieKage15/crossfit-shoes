@@ -1,6 +1,6 @@
 class Crossfit::Shoe
 
-  attr_accsessor :name, :shoe, :color, :price
+  attr_accsessor :name, :color, :price
 
   @@all = []
 
