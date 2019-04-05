@@ -1,4 +1,4 @@
-class Crossfit::Shoe
+class Shoe
 
   attr_accsessor :name, :color, :price
 
