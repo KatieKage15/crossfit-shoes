@@ -14,4 +14,18 @@ class Cli
       puts "#{i}. #{shoe_name.title}"
     end
   end
+
+  def menu
+    puts "What shoe would you like more information on?"
+    input = gets.chomp
+    shoe = Shoe.all[input to_i -1]
+
+    if !movie
+      puts "Sorry, that isn't a correct entry."
+      puts "Please enter a valid shoe number."
+      menu
+    else
+      Scraper.scrape_info(shoe)
+    end
+  end
 end
