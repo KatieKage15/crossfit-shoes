@@ -1,11 +1,12 @@
 class Shoe
 
-  attr_accessor :shoe_name, :color, :price, :title
+  attr_accessor :shoe_name, :color, :price, :title, :url
 
   @@all = []
 
-  def initialize(title)
-    @title = title 
+  def initialize(title, url)
+    @title = title
+    @url = url 
   end
 
   def save
