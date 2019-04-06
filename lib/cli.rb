@@ -7,7 +7,7 @@ class Cli
     puts "Which shoe would you like to choose?"
     Scraper.scrape_shoes
     display_shoes
-    menu 
+    menu
   end
 
   def display_shoes
