@@ -7,6 +7,7 @@ class Cli
     puts "Which shoe would you like to choose?"
     Scraper.scrape_shoes
     display_shoes
+    menu 
   end
 
   def display_shoes
@@ -18,9 +19,9 @@ class Cli
   def menu
     puts "What shoe would you like more information on?"
     input = gets.chomp
-    shoe = Shoe.all[input to_i -1]
+    shoe = Shoe.all[input.to_i - 1]
 
-    if !movie
+    if !shoe
       puts "Sorry, that isn't a correct entry."
       puts "Please enter a valid shoe number."
       menu
