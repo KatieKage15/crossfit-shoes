@@ -9,7 +9,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
     doc.css(".product-tile").each do |shoe| #loop - run through shoes and list them
       shoe_name = shoe.css(".title").text.strip
-      url = doc.css(".hockeycard").attr("data-context").value
+      data_url = doc.css(".hockeycard").attr("data-context").value
       shoe = Shoe.new(shoe_name, url)
       shoe.save
     end
@@ -18,7 +18,9 @@ class Scraper
   def self.scrape_info(shoe)
     html = open(@crossfit_shoe + shoe.url)
     doc = Nokogiri::HTML(html)
+      binding.pry
   end
-
-
 end
+
+#owlcarousel-wrapper
+#color-variation-row 

@@ -4,7 +4,7 @@ class Cli
 
   def run
     puts "Welcome to the CrossFit Store!"
-    puts "Which shoe would you like to choose?"
+    puts "Here are all our shoes:"
     Scraper.scrape_shoes
     display_shoes
     menu
