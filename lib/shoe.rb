@@ -1,6 +1,6 @@
 class Shoe
 
-  attr_accessor :shoe_product_details, :shoe_color, :shoe_price, :title, :data_url, :shoe_color_url
+  attr_accessor :shoe_product_details, :shoe_color, :shoe_price, :title, :data_url
 
   @@all = []
 
