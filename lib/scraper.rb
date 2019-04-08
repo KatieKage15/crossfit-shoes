@@ -21,6 +21,5 @@ class Scraper
     shoe.shoe_price = doc.css(".buy-block-header").text.split[11..12].map { |a| "#{a}" }.join(" ")
     shoe.shoe_color = doc.css(".product-color-clear").text
     shoe.shoe_product_details = doc.css(".prod-details").text.strip
-
   end
 end

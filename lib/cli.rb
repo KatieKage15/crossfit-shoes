@@ -29,8 +29,8 @@ class Cli
       Scraper.scrape_info(shoe)
       puts "Here are the detail for #{shoe.title}:"
       puts "The price is #{shoe.shoe_price}."
-      puts "The colors that this shoe comes in are: #{shoe.color}"
-      puts "The details of #{shoe.title} are: #{shoe.product_details}"
+      puts "The color that you chose is #{shoe.shoe_color}"
+      puts "The details of #{shoe.title} are: #{shoe.shoe_product_details}"
     end
   end
 end
