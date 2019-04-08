@@ -18,8 +18,15 @@ class Scraper
   def self.scrape_info(shoe)
     html = open(@crossfit_shoe + shoe.data_url)
     doc = Nokogiri::HTML(html)
-    shoe.shoe_price = doc.css(".buy-block-header").text.split[11..12].map { |a| "#{a}" }.join(" ")
-    shoe.shoe_color = doc.css(".product-color-clear").text
-    shoe.shoe_product_details = doc.css(".prod-details").text.strip
+      shoe_color_url = doc.css(".color-variation-column a").attr("href").value
+      shoe.shoe_price = doc.css(".buy-block-header").text.split[11..12].map { |a| "#{a}" }.join(" ")
+      shoe.shoe_product_details = doc.css(".prod-details").text.strip
+  end
+
+  def self.scrape_shoe_color(shoe)
+    html = open(@crossfit_shoe + shoe.data_url + shoe.shoe_color_url)
+    doc = Nokogiri::HTML(html)
+      binding.pry
+    shoe_color = shoe.css(".title").text.strip
   end
 end
