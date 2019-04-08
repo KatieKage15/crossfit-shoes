@@ -20,7 +20,13 @@ class Cli
     puts "What shoe would you like more information on?".white
       input = gets.chomp
 
-      shoe = Shoe.all[input.to_i - 1]
+      while input.to_i == 0
+        puts "Sorry, that isn't a correct entry.".red
+        puts "Please enter a valid shoe number.".red
+        input = gets.chomp
+      end
+
+        shoe = Shoe.all[input.to_i - 1]
 
       if !shoe
         puts "Sorry, that isn't a correct entry.".red
