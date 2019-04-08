@@ -27,12 +27,10 @@ class Cli
       menu
     else
       Scraper.scrape_info(shoe)
-      puts "Here are the detail for #{shoe.title}:"
+      puts "Here are the details for #{shoe.title}:"
       puts "The price is #{shoe.shoe_price}."
-      puts "The details of #{shoe.title} are: #{shoe.shoe_product_details}"
-
-      Scraper.scrape_shoe_color(shoe)
-      puts "The color that you chose is #{shoe_color}"
+      #puts "The color that you chose is #{shoe_color}"
+      puts "#{shoe.shoe_product_details}"
     end
   end
 end
