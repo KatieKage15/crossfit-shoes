@@ -1,32 +1,10 @@
 # Crossfit::Shoes
 
-My gem is based off of the crossfit website where they sell different types of shoes. There will be a list of shoes the user can choose from and when selected it will provide more information about the shoe.
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-#gem 'crossfit-shoes'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install crossfit-shoes
+My gem is based off of the CrossFit website (store.crossfit.com/womens-shoes) where they sell different types of Reebok brand name shoes. There will be a list of shoes the user can choose from and when selected it will provide more information about the shoe.
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+When program is run user will select a type of shoe (#1-48). If they select an appropriate corresponding number the program will return the price and the description on the shoe. The program will then also ask if they want to get information on another shoe. If the user does not input a known shoe number an error will be produced prompting the user to enter a valid number.  
 
 ## Contributing
 
